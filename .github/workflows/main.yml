@@ -19,4 +19,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build step
-        run: echo "Hello from deployment master, ${{ vars.NAME }}"
+        run: echo "Hello from deployment master, ${{ secrets.MY_NAME }}"
