@@ -1,4 +1,4 @@
-name: gha-script
+name: gha-demo
 
 on:
   push:
@@ -15,8 +15,10 @@ on:
       - release/**'
 
 jobs:
-  build:
+  action-demo:
     runs-on: ubuntu-latest
     steps:
-      - name: build step
-        run: echo "Hello from deployment master, ${{ secrets.MY_NAME }}"
+      - name: checkout the code
+        uses: actions/checkout@v4
+      - name: print index.html file
+        run: cat index.html
