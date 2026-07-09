@@ -7,4 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Script Step
-        run: echo "Hello World"
+        run: |
+          echo "Hello World 1"
+          echo "Hello World 2"
