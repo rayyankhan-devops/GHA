@@ -19,4 +19,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build step
-        run: echo "Demo build"
+        run: echo "Hello from deployment master, ${{ vars.MY_NAME }}"
