@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: EnvDeMo
         env:
-          APP_ENV: "test"
+          APP_ENV: "prod"
         run: echo "App is running in Env $APP_ENV"
