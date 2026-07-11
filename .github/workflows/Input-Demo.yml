@@ -6,12 +6,19 @@ on:
         description: Please enter the Environment
         required: true
         default: dev
+        options:
+          - dev
+          - test
+          - prod
+      arficate-tag:
+        description: choose teh git tag to deploy
+        required: true
 jobs:
   testing:
     runs-on: ubuntu-latest
     steps:
       - name: Env
-        run: echo "App is running in a ${{ inputs.enviroment }}"
+        run: echo "App ${{ inputs.arficate-tag }} running in a ${{ inputs.enviroment }}"
 
       
       
