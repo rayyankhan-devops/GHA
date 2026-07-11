@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: EnvDeMo
+        env:
+          APP_ENV: "test"
         run: echo "App is running in Env $APP_ENV"
