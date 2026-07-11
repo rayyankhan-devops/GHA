@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Env
-        run: echo "App is running in a {{ inputs.enviroment }}"
+        run: echo "App is running in a ${{ inputs.enviroment }}"
 
       
       
