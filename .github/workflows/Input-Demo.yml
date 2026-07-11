@@ -6,6 +6,7 @@ on:
         description: Please enter the Environment
         required: true
         default: dev
+        type: choice
         options:
           - dev
           - test
