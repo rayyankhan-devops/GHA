@@ -1,0 +1,10 @@
+name: Env Demo
+on: workflow_dispatch
+env:
+  APP_ENV: "dev"
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: EnvDeMo
+        run: echo "App is running in Env $APP_ENV"
