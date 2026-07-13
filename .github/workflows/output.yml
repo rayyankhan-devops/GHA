@@ -16,5 +16,5 @@ jobs:
     steps:
       - name: checking-the-output-in-another-job
         run: |
-          echo "${{ needs.build.outputs.version }}"
+          echo "the app is deployed on version: ${{ needs.build.outputs.version }}"
       
