@@ -1,0 +1,10 @@
+name: Context-demo
+on: push
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo the context
+        run: |
+          echo "This workflow is runned by ${{ github.actor }}"
+          run: echo "This repository name is ${{ github.repository }}"
