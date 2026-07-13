@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run if branch is main
-        if: github.actor == 'rayyankhan-devops'
+        if: github.actor == 'rayyankhan-dvops'
         run: echo "Running this step"
       - name: running the step directly
         run: echo "Meow Meow run directly"        
