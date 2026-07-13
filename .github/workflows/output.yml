@@ -2,13 +2,19 @@ name: output-demo
 on: push
 jobs:
   build:
+    outputs:
+      version: ${{ steps.s1.outputs.version }}
     runs-on: ubuntu-latest
     steps:
       - name: output
         id: s1
         run: |
           echo "version=1.0.0" >> $GITHUB_OUTPUT
-      - name: check-output-at-same-job-level
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking-the-output-in-another-job
         run: |
-          echo "the app version is : ${{ steps.s1.outputs.version }}"
+          echo "${{ needs.build.outputs.version }}"
       
