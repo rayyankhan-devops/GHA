@@ -11,3 +11,6 @@ jobs:
       - name: Echo the all context
         run: |
           echo "${{ toJson(github) }}"
+      - name: Echo the Env Sha
+        run: |
+          echo "$GITHUB_SHA"
